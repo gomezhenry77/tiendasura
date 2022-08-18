@@ -29,7 +29,31 @@ let precio=document.getElementById("precioInfo")
 precio.textContent=producto.precio
 
 let pildora=document.getElementById("pildora")
-console.log(pildora.textContent);
+console.log(pildora.textContent)
+
+let popularidad=document.getElementById("popularidad")
+
+
+
+
+for (let index = 1; index <= popularidad; index++) {
+    if (index == 1) {
+        let estrella1 = document.getElementById("1estrella")
+        estrella1.classList.add("text-warning")
+    }else if(index == 2){
+        let estrella2 = document.getElementById("2estrella")
+        estrella2.classList.add("text-warning")
+    }else if(index == 3){
+        let estrella3 = document.getElementById("3estrella")
+        estrella3.classList.add("text-warning")
+    }else if(index == 4){
+        let estrella4 = document.getElementById("4estrella")
+        estrella4.classList.add("text-warning")
+    }else{
+        let estrella5 = document.getElementById("5estrella")
+        estrella5.classList.add("text-warning")
+    }
+}
 
 //escucho el clic en el botón añadir al carrito:
 let botonCarrito=document.getElementById("botonAgregarCarrito")

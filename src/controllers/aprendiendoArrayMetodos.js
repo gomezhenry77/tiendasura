@@ -10,7 +10,7 @@ let productos=[
         nombre:"PIANO Roland GP607 Digital Grand, Polished Ebony",
         fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/2Piano1.jpg?alt=media&token=3a6a8a64-9f32-47e3-8c42-e9fa906b1045", "https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/2piano2.jpg?alt=media&token=8a8e8730-2786-4dc8-9f92-ba824c14c6dc"],
         precio:4.901,
-        popularidad:0,
+        popularidad:4,
         descripcion:"The Roland GP607 Digital Grand Piano has a stunning finish and is packed with class leading technology to offer unforgettable playing experience. The mini grand piano size is large enough to have serious presence on any stage, but remains small enough to comfortably fit inside the home environment. The GP607 benefits from Roland's advanced SuperNatural piano modelling technology, developed over generations of Roland digital pianos. The PHA-50 hammer action keyboard has a similar feel to a true acoustic piano. The Bluetooth connectivity enhances your experience with the GP607 by integrating it with a range of dedicated editing and playback apps. Finally the polished ebony finish introduces a stunning look to this versatile instrument"
     },
     {
@@ -118,9 +118,9 @@ productos.forEach(function(producto){
     precio.classList.add("fw")
     precio.textContent="£"+producto.precio
 
-/*     let popularidad=document.createElement("h4")
+    let popularidad=document.createElement("h4")
     popularidad.classList.add("fw")
-    popularidad.textContent=producto.popularidad */
+    popularidad.textContent=producto.popularidad
 
     let descripcion=document.createElement("p")
     descripcion.classList.add("text-danger", "d-none")
@@ -131,7 +131,7 @@ productos.forEach(function(producto){
     tarjeta.appendChild(fotos)
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(precio)
-   /*  tarjeta.appendChild(popularidad) */
+    tarjeta.appendChild(popularidad)
     tarjeta.appendChild(descripcion)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)

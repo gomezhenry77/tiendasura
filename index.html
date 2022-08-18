@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda SURA</title>
-  <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
@@ -22,77 +21,325 @@
 <body class="fuente">
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark animate__animated animate__rubberBand">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
+        <div>
+          <img src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/logo.jpg?alt=media&token=db2ff022-e4f5-439c-8ed7-aed94ced803d" width="60" alt="Logo" />
+        </div>
+        <h2>Tienda de instrumentos musicales</h2>
+        <div class="d-flex justify-content-center">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav gap-3">
+              <a class="nav-link active" aria-current="page" href="./src/views/tienda.html"
+                >Orchestral</a
+              >
+              <a class="nav-link active" aria-current="page" href="#"
+                >Rock</a
+              >
+              <a class="nav-link active" aria-current="page" href="#"
+              >Folk</a
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <i class="bi bi-box-arrow-in-right"></i> Regístrate
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
+  <section>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registro</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Usuario</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Confirmar contraseña</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="dropdown-menu">
+      <form class="px-4 py-3">
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleDropdownFormEmail1"
+            placeholder="email@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1" class="form-label"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="exampleDropdownFormPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="dropdownCheck"
+            />
+            <label class="form-check-label" for="dropdownCheck">
+              Remember me
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">New around here? Sign up</a>
+      <a class="dropdown-item" href="#">Forgot password?</a>
+    </div>
+  </section>
+  </header>
   <main>
+    <section class="container-fluid bg-dark">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide container-sm"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/banner2.jpg?alt=media&token=eb86b1ad-58e3-4a14-946f-58db7f49bbe4"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h6></h6>
+              <p>
+                Ya tenemos estudio de grabación, reserva tu espacio
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="9000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/la%20venta%20de%20guitarras%20se%20ha%20disparado.jpg?alt=media&token=0f0449ba-be72-4b3f-91bd-6f0c30239ff3"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h6></h6>
+              <p>
+                Descubre por qué la venta de guitarra se ha disparado
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tiendasurahagf.appspot.com/o/donaci%C3%B3n%20de%20instrumentos.jpg?alt=media&token=ef071a9d-476d-483f-91ca-56447af9bc1b"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h6></h6>
+              <p>
+                Apoyamos el programa para la donación de instrumentos
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="container-fluid p-4">
+      <div class="container-fluid">
+        <h2 class="d-flex justify-content-center">Busca tu tipo de instrumento</h2>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col mt-3">
+            <div class="card" style="width: 22rem">
+              <img
+                src=""
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+                </p>
+                <a
+                  href=""
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Orchestral</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col mt-3">
+            <div class="card" style="width: 22rem">
+              <img
+                src=""
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+                </p>
+                <a
+                  href=""
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Rock</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col mt-3">
+            <div class="card" style="width: 22rem">
+              <img
+                src="./img/Game award/2018 Portada_God_of_War.webp"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+                </p>
+                <a
+                  href=""
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Folk</a
+                >
+              </div>
+            </div>
+          </div>
+
+    </section>
+    
 
     <section class="banner text-white">
-      <h1>Tienda instrumentos musicales</h1>
     </section>
+      
 
-    <section>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12 col-md-8">
-            <img src="./assets/img/guitarra.png" alt="" class="img-fluid w-100">
-          </div>
-          <div class="col-12 col-md-4 align-self-center">
-            <h3>WELCOME</h3>
-            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, commodi ea corrupti nesciunt deserunt
-              voluptatem hic incidunt saepe! Pariatur dolorum eligendi tempore. Ullam laborum ex impedit deserunt sequi,
-              itaque recusandae!</P>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-box-arrow-in-right"></i> Registrate</button>
-          </div>
-        </div>
+    <footer class="container-fluid p-1">
+      <div class="container-fluid d-flex justify-content-center">
+        <p>
+          &copy; Todos Los Derechos Reservados 2022
+        </p>
       </div>
-    </section>
-    <section>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="container-fluid d-flex justify-content-center gap-3">
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-pinterest"></i>
       </div>
-    </section>
+    </footer>
+
   </main>
   <footer>
 
@@ -100,7 +347,7 @@
 
 
 
-  <!-- JavaScript Bundle with Popper -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
