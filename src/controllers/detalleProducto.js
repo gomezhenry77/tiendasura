@@ -31,12 +31,13 @@ precio.textContent=producto.precio
 let pildora=document.getElementById("pildora")
 console.log(pildora.textContent)
 
-let popularidad=document.getElementById("popularidad")
+let popularidad=document.getElementById("popularidadInfo")
+popularidad.textContent=producto.popularidad
+popularidad.classList.add("fw-bold")
 
+let valorProducto=Math.round(producto.popularidad)
 
-
-
-for (let index = 1; index <= popularidad; index++) {
+for (let index = 1; index <= valorProducto; index++) {
     if (index == 1) {
         let estrella1 = document.getElementById("1estrella")
         estrella1.classList.add("text-warning")

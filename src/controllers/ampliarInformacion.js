@@ -9,6 +9,7 @@ contenedorProducto.addEventListener("click",function(evento){
         informacionProducto.precio=(evento.target.parentElement.querySelector("h4").textContent)
         informacionProducto.descripcion=(evento.target.parentElement.querySelector("p").textContent)
         informacionProducto.fotos=(evento.target.parentElement.querySelector("img").src)
+        informacionProducto.popularidad=(evento.target.parentElement.querySelector("h5").textContent)
 
         //guardando un objeto en memoria
         

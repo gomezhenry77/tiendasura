@@ -118,8 +118,8 @@ productos.forEach(function(producto){
     precio.classList.add("fw")
     precio.textContent="£"+producto.precio
 
-    let popularidad=document.createElement("h4")
-    popularidad.classList.add("fw")
+    let popularidad=document.createElement("h5")
+    popularidad.classList.add("fw-bold","d-none")
     popularidad.textContent=producto.popularidad
 
     let descripcion=document.createElement("p")
